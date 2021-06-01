@@ -29,7 +29,7 @@ const dataShow = countries => {
             delay: 5000,
         });
     };
-    if (countries.length > 1 && countries.length < 10) {
+    if (countries.length > 2 && countries.length <= 10) {
         refs.countriesMrkp.innerHTML = previewCountryTpl(countries);
     };
     if (countries.length === 1) {
@@ -37,7 +37,7 @@ const dataShow = countries => {
     };
 };
 const noticeInfo = () => {
-        notice({
+        notice.trim()({
             title: 'OOPS!',
             text: 'Invalid entered value. Try again =)',
             delay: 2500,
